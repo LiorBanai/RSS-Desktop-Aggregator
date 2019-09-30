@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/LB RSS Desktop Aggregator/v16
+/Aggregator.Convert/obj/x86
+/Aggregator.Convert/bin/Debug
+/Aggregator.Core/obj
+/Aggregator.Data/obj
+/Aggregator.GUI/obj/x86
+/Aggregator.GUI/bin/Debug
+/Aggregator.Util/obj
+/packages/ObjectListView.Official.2.9.1
+/LB RSS Desktop Aggregator.6.0.ReSharper.user
+/Aggregator on Desktop.sln.docstates.suo
+/Aggregator on Desktop.6.0.ReSharper.user
+/LB RSS Desktop Aggregator.suo
+/LB RSS Desktop Aggregator.sln.DotSettings.user
+/LB RSS Desktop Aggregator.sln.docstates.suo

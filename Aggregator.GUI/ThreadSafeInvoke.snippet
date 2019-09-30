@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ThreadsafeInvoke</Title>
+    <Shortcut></Shortcut>
+    <Description>Wraps code in an anonymous method passed to Invoke for Thread safety.</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="CSharp">
+      <![CDATA[
+      Invoke( (MethodInvoker) delegate
+      {
+          $selected$
+      });      
+      ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A5FAB72-AA1B-48F0-8705-13AC2FFBAFE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aggregator.GUI</RootNamespace>
+    <AssemblyName>Desktop Aggregator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RSSOUTLOOK.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InitialSettingReader.cs" />
+    <Compile Include="WinForms\AddGmailFeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\AddGmailFeed.Designer.cs">
+      <DependentUpon>AddGmailFeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\AboutBoxDesktopAggregator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\AboutBoxDesktopAggregator.Designer.cs">
+      <DependentUpon>AboutBoxDesktopAggregator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="WinForms\FeedTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\FeedTester.Designer.cs">
+      <DependentUpon>FeedTester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\FollowUpPosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\FollowUpPosts.Designer.cs">
+      <DependentUpon>FollowUpPosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\MainFormOutlook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\MainFormOutlook.Designer.cs">
+      <DependentUpon>MainFormOutlook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\FeedExports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\FeedExports.Designer.cs">
+      <DependentUpon>FeedExports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\LogsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\LogsForm.Designer.cs">
+      <DependentUpon>LogsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\ErrorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\ErrorsForm.Designer.cs">
+      <DependentUpon>ErrorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\FeedInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\FeedInformationDialog.Designer.cs">
+      <DependentUpon>FeedInformationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\MainFormRSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\MainFormRSS.Designer.cs">
+      <DependentUpon>MainFormRSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\NativeMethods.cs" />
+    <Compile Include="WinForms\NetworkStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\NetworkStatistics.Designer.cs">
+      <DependentUpon>NetworkStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\Old\FeedInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\Old\FeedInformationDialog.Designer.cs">
+      <DependentUpon>FeedInformationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\Old\MainFormRSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\Old\MainFormRSS.designer.cs">
+      <DependentUpon>MainFormRSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\Old\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\Old\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\RSSItemViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\RSSItemViewer.Designer.cs">
+      <DependentUpon>RSSItemViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\OutlokFolderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\OutlokFolderForm.Designer.cs">
+      <DependentUpon>OutlokFolderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinForms\VersionHistoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\VersionHistoryDialog.Designer.cs">
+      <DependentUpon>VersionHistoryDialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WinForms\AddGmailFeed.resx">
+      <DependentUpon>AddGmailFeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\AboutBoxDesktopAggregator.resx">
+      <DependentUpon>AboutBoxDesktopAggregator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\FeedTester.resx">
+      <DependentUpon>FeedTester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\FollowUpPosts.resx">
+      <DependentUpon>FollowUpPosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\MainFormOutlook.resx">
+      <DependentUpon>MainFormOutlook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\FeedExports.resx">
+      <DependentUpon>FeedExports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\LogsForm.resx">
+      <DependentUpon>LogsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\ErrorsForm.resx">
+      <DependentUpon>ErrorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\FeedInformationDialog.resx">
+      <DependentUpon>FeedInformationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\MainFormRSS.resx">
+      <DependentUpon>MainFormRSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\NetworkStatistics.resx">
+      <DependentUpon>NetworkStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\Old\FeedInformationDialog.resx">
+      <DependentUpon>FeedInformationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\Old\MainFormRSS.resx">
+      <DependentUpon>MainFormRSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\Old\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\RSSItemViewer.resx">
+      <DependentUpon>RSSItemViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\OutlokFolderForm.resx">
+      <DependentUpon>OutlokFolderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WinForms\VersionHistoryDialog.resx">
+      <DependentUpon>VersionHistoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ThreadSafeInvoke.snippet" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aggregator.Core\Aggregator.Core.csproj">
+      <Project>{46AADC1F-661D-499A-9703-292072C2BBE4}</Project>
+      <Name>Aggregator.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Aggregator.Data\Aggregator.Data.csproj">
+      <Project>{929BCE9E-8E43-4834-94EF-CB73A2E5D9DC}</Project>
+      <Name>Aggregator.Data</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Aggregator.Util\Aggregator.Util.csproj">
+      <Project>{31C9EEB8-F0EA-4A6D-BB36-3799E1FE0281}</Project>
+      <Name>Aggregator.Util</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelicon.gif" />
+    <None Include="Resources\okicon.gif" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\clearIcon2.gif" />
+    <None Include="Resources\history_clear.png" />
+    <None Include="Resources\RSSOUTLOOK big.gif" />
+    <None Include="Resources\rss icon transparent.gif" />
+    <None Include="Resources\resetIcon.jpg" />
+    <None Include="Resources\refreshicon.jpg" />
+    <None Include="Resources\Playicon.png" />
+    <None Include="Resources\Feedadd.png" />
+    <None Include="Resources\rssadd.png" />
+    <None Include="Resources\Pauseicon.png" />
+    <None Include="Resources\gmailRSS.jpg" />
+    <None Include="Resources\facebookicon.jpg" />
+    <None Include="Resources\Aggregator.Core.dll" />
+    <None Include="Resources\Aggregator.Util.dll" />
+    <None Include="Resources\Aggregator.Data.dll" />
+    <None Include="Resources\rssGmailOutlook.jpg" />
+    <None Include="Resources\Counticon.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\Deleteicon.png" />
+    <None Include="Resources\deleteicon2.gif" />
+    <None Include="Resources\reply.gif" />
+    <None Include="Resources\RefreshIconSmall.jpg" />
+    <None Include="Resources\RefreshIconSmallgray.jpg" />
+    <None Include="Resources\refreshspecificcategory.png" />
+    <None Include="Resources\rssfeedinfo.jpg" />
+    <None Include="Resources\rsshide.png" />
+    <None Include="Resources\rsshtml.png" />
+    <None Include="Resources\rsshtmlsmall.jpg" />
+    <None Include="Resources\rsshtmlsmall1.jpg" />
+    <None Include="Resources\rsspink.png" />
+    <None Include="Resources\iconsearch.png" />
+    <None Include="Resources\configurations.png" />
+    <None Include="Resources\rsslike.png" />
+    <None Include="Resources\rssheart2.jpg" />
+    <None Include="Resources\+1.png" />
+    <None Include="Resources\htmliconsmall.gif" />
+    <None Include="bin\Debug\ObjectListView.dll" />
+    <None Include="Resources\ObjectListView.dll" />
+    <None Include="Resources\buttonOn.jpg" />
+    <None Include="Resources\buttonOFF.jpg" />
+    <None Include="Resources\buttonGray.jpg" />
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\CheckedIcon.jpg" />
+    <None Include="Resources\arrow1.gif" />
+    <None Include="Resources\arrow2.gif" />
+    <None Include="Resources\refresh.gif" />
+    <None Include="Resources\hearth.gif" />
+    <None Include="Resources\search.gif" />
+    <None Include="Resources\export.gif" />
+    <None Include="Resources\configurations.gif" />
+    <None Include="Resources\logo3.jpg" />
+    <None Include="Resources\logo4.gif" />
+    <None Include="Resources\refreshicongraytransparent.jpg" />
+    <None Include="Resources\RefreshIconSmallgray.gif" />
+    <Content Include="RSSOUTLOOK.ico" />
+    <Content Include="RSSOUTLOOK2.ico" />
+    <Content Include="RSSOUTLOOKsmall.ico" />
+    <Content Include="thumb_Outlook.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
