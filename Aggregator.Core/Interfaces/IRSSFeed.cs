@@ -29,8 +29,6 @@ namespace Aggregator.Core
         bool DontKeepHistory { get; set; }
         int LastNewPostsCount { get; }
         List<IRSSPost> LastNewPosts { get; }
-        //IEnumerable<IRSSPost> UnreadItems { get; } //breaking changes
-        //Encodings data members
         int FeedEncodingCodePage { get; set; }
         Encoding FeedEncoding { get; set; }
         string RSSNameWithCount { get; }
